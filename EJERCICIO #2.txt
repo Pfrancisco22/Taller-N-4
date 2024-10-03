@@ -1,0 +1,42 @@
+Algoritmo 
+Inicializar dos listas vacías: calificaciones y pesos.
+Iniciar un bucle que se repetirá indefinidamente:
+Pedir al usuario que ingrese una calificación.
+Pedir al usuario que ingrese el peso (en %).
+Agregar la calificación a la lista calificaciones.
+Agregar el peso (convertido a decimal) a la lista pesos.
+Preguntar al usuario si desea ingresar otra calificación:
+Si la respuesta es diferente de "sí", salir del bucle.
+Calcular peso_total sumando todos los elementos en pesos.
+Si peso_total es igual a 0:
+Mostrar un mensaje indicando que no se puede calcular el promedio.
+Si peso_total no es cero:
+Calcular suma_ponderada como la suma de cada calificación multiplicada por su peso.
+Calcular el promedio_ponderado dividiendo suma_ponderada por peso_total.
+Mostrar el promedio ponderado al usuario.
+
+Pseudocódigo
+
+INICIO
+    DECLARAR calificaciones COMO lista vacía
+    DECLARAR pesos COMO lista vacía
+
+        LEER calificacion
+        LEER peso
+
+        AGREGAR calificacion A calificaciones
+        AGREGAR peso / 100 A pesos
+
+        LEER respuesta
+    MIENTRAS respuesta == "sí"
+
+    peso_total = SUMAR todos los elementos de pesos
+
+    SI peso_total == 0 ENTONCES
+        IMPRIMIR "El peso total es cero. No se puede calcular el promedio ponderado."
+    SINO
+        suma_ponderada = SUMAR (c * p PARA cada c EN calificaciones Y cada p EN pesos)
+        promedio_ponderado = suma_ponderada / peso_total
+        IMPRIMIR "El promedio ponderado es: ", promedio_ponderado
+    FIN SI
+FIN
